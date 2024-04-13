@@ -1,0 +1,55 @@
+
+
+🌟 Few Shot Prompting
+The process of giving examples along with the prompt when preparing the prompt increases the superiority of the answers 🌟
+
+✅ Good quality examples = More superior results
+✅ More examples = More Superior results
+
+🧠 Self-generated in-context learning - SG-ICL
+🔗 https://files.cdn.thinkific.com/file_uploads/859098/images/a8a/ee4/668/Course_Creation_Figures-16.png?width=1920
+🎯 Generate few examples of this → use the examples along with the context for the second prompt
+💭 THOUGHT GENERATION
+🧩 Chain of thought prompting Prompt + let's think step by step = Chain of Thought Prompting This model of prompting gains superior results, especially in cases of critical thinking or mathematical problems.
+🧵 Thread of thought Prompting
+It is the process of making the model go through the problem step by step and analyzing it along the way. "Walk me through this context in manageable parts step by step, summarizing and analyzing as we go"
+This is superior for complex, information-dense scenarios
+🔄 Contrastive chain of thought prompting
+Arithmetic reasoning and factual question answering.
+Process of giving both the example of correct answer and incorrect answer along with the prompt.
+❓ Self-Ask Prompting
+Applicable for factual queries, deconstructs complex queries into smaller, more manageable sub-queries.
+Model is made to ask questions to itself, and these sub-questions will later lead the model. Example: Question: Who lived longer, Theodor Haecker or Harry Vaughan Watkins? Are follow-up questions needed here: Yes. Follow up: How old was Theodor Haecker when he died? Intermediate answer: Theodor Haecker was 65 years old when he died. Follow up: How old was Harry Vaughan Watkins when he died? Intermediate answer: Harry Vaughan Watkins was 69 years old when he died. So the final answer is: Harry Vaughan Watkins
+📊 Tabular Chain of Thought Prompting (Tab-CoT)
+Reasoning process in a tabular format, employing tables with specific column names like "|step|question|response|" to direct the model in generating a structured reasoning process
+Useful as it allows both vertical and horizontal reasoning Example: Jackson is planting tulips. He can fit 6 red tulips in a row and 8 blue tulips in a row. If Jackson buys 36 red tulips and 24 blue tulips, how many rows of flowers will he plant? |step|subquestion|procedure|result|
+🧩 Problem Decomposition Prompting
+A prompt which makes the LLM tackle each sub-problem individually.
+
+🔍 Least-to-most prompting:
+LLM decomposes a large problem into various smaller problems to solve it sequentially.
+Not suitable for every problem
+"question" + first decompose the problem into separate sequential sub-problems. Then, iteratively solve each and use it to answer the next.
+Can be used in junction with few-shot prompting
+📝 Plan and solve prompting
+First, the problem is understood, then a plan is formulated, and finally, the problem is solved step by step.
+Has shown superior results than zero-shot prompting and, in some cases, few-shot prompting.
+Structure: prompt + "Let's first understand the problem and devise a plan to solve it. Then, let's carry out the plan and solve the problem step by step."
+💻 Program-of-thoughts prompting (PoTH)
+Having the model generate reasoning steps as prompts, and this code is executed finally
+Highly effective for any calculation or programming related tasks Example prompt: What sum results if you add up all the numbers from 1 to 100? Please write easily understandable code that could be used to answer this question.
+🔍 Self-criticism Prompting (SCP)
+To make LLMs critically evaluate their responses.
+This approach is great for nuanced tasks where precision, factual accuracy, and depth of understanding are paramount.
+Structure: Prompt + Response + Critic = Revised Response
+📊 Self-Evaluation prompting
+The model is made to evaluate the probability that the answer it created is right
+The method can be improved by having the model consider various different answers for the same question before evaluating the validity of a specific answer.
+It is similar to brainstorming various answers, which helps the model assess the validity of a certain output. Example question: Q: Where was Idris Elba born? A: Hackney, London Q: How confident are you in that answer? What probability would you give it?
+Structure: QUESTION → ANSWER + CHANCE OF BEING CORRECT
+🔄 Self-Refine
+Not only providing the probability that the answer is correct but also providing feedback on how to improve the response and then implementing the suggested refinements.
+This iterative process continues until a stopping condition is met.
+It has been proven superior to most baseline methods across a wide range of tasks
+Not suitable for arithmetic reasoning Example prompt: Brainstorm an idea for a YouTube thumbnail for a video about prompt engineering with large language models. After you've created the idea, critique it. Finally, use the critiques to refine the initial idea.
+Structure: QUESTION → ANSWER → Critique → Revised Answer
