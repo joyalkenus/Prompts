@@ -1,0 +1,12 @@
+🧩 Problem Decomposition Prompting
+A prompt which makes the LLM tackle each sub-problem individually.
+
+🔍 Least-to-most prompting:
+LLM decomposes a large problem into various smaller problems to solve it sequentially.
+Not suitable for every problem
+"question" + first decompose the problem into separate sequential sub-problems. Then, iteratively solve each and use it to answer the next.
+Can be used in junction with few-shot prompting
+📝 Plan and solve prompting
+First, the problem is understood, then a plan is formulated, and finally, the problem is solved step by step.
+Has shown superior results than zero-shot prompting and, in some cases, few-shot prompting.
+Structure: prompt + "Let's first understand the problem and devise a plan to solve it. Then, let's carry out the plan and solve the problem step by step."

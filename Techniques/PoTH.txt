@@ -1,0 +1,4 @@
+💻 Program-of-thoughts prompting (PoTH)
+Having the model generate reasoning steps as prompts, and this code is executed finally
+Highly effective for any calculation or programming related tasks
+Example prompt: What sum results if you add up all the numbers from 1 to 100? Please write easily understandable code that could be used to answer this question.

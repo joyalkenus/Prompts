@@ -1,0 +1,26 @@
+💭 THOUGHT GENERATION
+🧩 Chain of thought prompting
+Prompt + let's think step by step = Chain of Thought Prompting. This model of prompting gains superior results, especially in cases of critical thinking or mathematical problems.
+
+🧵 Thread of thought Prompting
+It is the process of making the model go through the problem step by step and analyzing it along the way.
+"Walk me through this context in manageable parts step by step, summarizing and analyzing as we go"
+This is superior for complex, information-dense scenarios
+🔄 Contrastive chain of thought prompting
+Arithmetic reasoning and factual question answering.
+Process of giving both the example of correct answer and incorrect answer along with the prompt.
+❓ Self-Ask Prompting
+Applicable for factual queries, deconstructs complex queries into smaller, more manageable sub-queries.
+Model is made to ask questions to itself, and these sub-questions will later lead the model.
+Example:
+Question: Who lived longer, Theodor Haecker or Harry Vaughan Watkins?
+Are follow-up questions needed here: Yes.
+Follow up: How old was Theodor Haecker when he died?
+Intermediate answer: Theodor Haecker was 65 years old when he died.
+Follow up: How old was Harry Vaughan Watkins when he died?
+Intermediate answer: Harry Vaughan Watkins was 69 years old when he died.
+So the final answer is: Harry Vaughan Watkins
+📊 Tabular Chain of Thought Prompting (Tab-CoT)
+Reasoning process in a tabular format, employing tables with specific column names like "|step|question|response|" to direct the model in generating a structured reasoning process
+Useful as it allows both vertical and horizontal reasoning
+Example: Jackson is planting tulips. He can fit 6 red tulips in a row and 8 blue tulips in a row. If Jackson buys 36 red tulips and 24 blue tulips, how many rows of flowers will he plant? |step|subquestion|procedure|result|

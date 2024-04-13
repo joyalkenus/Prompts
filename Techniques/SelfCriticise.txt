@@ -1,0 +1,20 @@
+ 🔍 Self-criticism Prompting (SCP)
+To make LLMs critically evaluate their responses.
+This approach is great for nuanced tasks where precision, factual accuracy, and depth of understanding are paramount.
+Structure: Prompt + Response + Critic = Revised Response
+📊 Self-Evaluation prompting
+The model is made to evaluate the probability that the answer it created is right
+The method can be improved by having the model consider various different answers for the same question before evaluating the validity of a specific answer.
+It is similar to brainstorming various answers, which helps the model assess the validity of a certain output.
+Example question:
+Q: Where was Idris Elba born?
+A: Hackney, London
+Q: How confident are you in that answer? What probability would you give it?
+Structure: QUESTION → ANSWER + CHANCE OF BEING CORRECT
+🔄 Self-Refine
+Not only providing the probability that the answer is correct but also providing feedback on how to improve the response and then implementing the suggested refinements.
+This iterative process continues until a stopping condition is met.
+It has been proven superior to most baseline methods across a wide range of tasks
+Not suitable for arithmetic reasoning
+Example prompt: Brainstorm an idea for a YouTube thumbnail for a video about prompt engineering with large language models. After you've created the idea, critique it. Finally, use the critiques to refine the initial idea.
+Structure: QUESTION → ANSWER → Critique → Revised Answer
