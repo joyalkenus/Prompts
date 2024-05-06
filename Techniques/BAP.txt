@@ -1,0 +1,6 @@
+BIG ASS PROMPTING: (Useful for bigger context sized llm in the future)
+1. A larrge prompt with 10k-1m tokens.
+
+- useful for solving problems in one shot
+- use CONTEXT filled prompts.
+
